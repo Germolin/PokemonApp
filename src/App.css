@@ -1,0 +1,290 @@
+* {
+	box-sizing: border-box;
+}
+
+body {
+	background: #ececec;
+	font-family: 'Muli', sans-serif;
+	overflow-y: scroll;
+	color: #383838;
+}
+
+.header {
+	margin-top: 50px;
+	display: flex;
+	align-items: center;
+}
+
+.logo {
+	flex: 1;
+}
+
+.logo img{
+	width: 80px;
+	margin: 0 auto;
+	display: block;
+}
+
+.cartBtn {
+	cursor: pointer;
+	position: relative;
+}
+
+.cartItemCount {
+	background: #ed4630;
+	height: 25px;
+	width: 25px;
+	position: absolute;
+	border-radius: 100%;
+	text-align: center;
+	line-height: 25px;
+	color: white;
+	z-index: 1;
+	right: -8px;
+	top: -8px;
+}
+
+.cartBtn img {
+	width: 40px;
+	opacity: .2;
+}
+
+.cart {
+	position: fixed;
+	bottom: -100%;
+	left: 0;
+	width: 100%;
+	background: white;
+	border-top: 1px solid #e1e1e1;
+	z-index: 1;
+	transition: all .25s ease-in-out;
+	height: 190px;
+
+}
+
+.cart--active {
+	bottom: 0;
+}
+
+.cartList {
+	display: flex;
+	padding: 20px;
+	overflow-x: auto;
+	height: 100%;
+}
+
+.cartListItem {
+	margin-right: 30px;
+	position: relative;
+}
+
+.cartListItem__removeBtn {
+	position: absolute;
+	left: -10px;
+	top: -5px;
+	height: 20px;
+	width: 20px;
+	display: none;
+}
+
+.cartListItem__removeBtn img {
+	height: 100%;
+	width: 100%;
+	display: block;
+}
+
+.cartListItem:hover .cartListItem__removeBtn {
+	display: block;
+	cursor: pointer;
+}
+
+.cartListItem__image  {
+	width: 110px;
+}
+
+.cartHeading {
+	margin-top: 15px;
+	margin-left: 30px;
+	opacity: .8;
+}
+
+.cartEmpty {
+	text-align: center;
+	margin-top: 30px;
+	font-size: 30px;
+	font-weight: bold;
+	opacity: .9;
+}
+
+.cartCloseBtn {
+	position: absolute;
+	right: 15px;
+	top: 15px;
+	opacity: .6;
+	cursor: pointer;
+}
+
+.wrapper {
+	width: 80%;
+	margin: 0 auto;
+}
+
+.filterInput {
+	margin-top: 30px;
+	padding: 5px;
+}
+
+.filterInput input {
+	width: 100%;
+	height: 45px;
+	padding: 8px 10px;
+	font-size: 16px;
+	display: block;
+	border: none;
+	box-shadow: 0px 1px 2px 1px #e1e1e1;
+}
+
+.filterInput input:focus {
+	outline: none;
+	box-shadow: 0px 2px 2px 1px #d2d0d0;
+}
+
+.list {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	padding-bottom: 200px;
+}
+
+.listItem {
+	width: 24%;
+	background: #fff;
+	padding: 15px;
+	margin-bottom: 10px;
+	margin: 5px;
+	box-shadow: 0px 1px 2px 1px #e1e1e1;
+	text-align: center;
+}
+
+.listItem img {
+	width: 80%;
+	margin: 0 auto;
+	display: block;
+}
+
+.listItem__name {
+	margin: 0;
+	margin-top: 20px;
+}
+
+.listItem__price {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.listItem__priceTxt {
+	margin-left: 5px;
+	font-weight: bold;
+	color: green;
+	font-size: 24px;
+}
+
+.listItem__addButton {
+	text-align: center;
+	margin-top: 10px;
+	padding: 8px;
+	border-radius: 3px;
+	box-shadow: 0px 1px 1px 1px #e1e1e1;
+}
+
+.listItem__addButton:hover, .listItem--added .listItem__addButton {
+	background: #5898e8;
+	color: white;
+	cursor: pointer;
+}
+
+.listItem--added .listItem__addButton {
+	cursor: not-allowed;
+}
+
+.list--empty {
+	text-align: center;
+	padding-bottom: 50px;
+	padding-top: 0px;
+}
+
+.list--empty img {
+	width: 100px;
+}
+
+.list--empty p {
+	opacity: .8;
+}
+
+.typeList {
+	display: flex;
+	list-style: none;
+	padding: 0 5px;
+}
+
+.typeList li {
+	margin-right: 15px;
+	background: #e4e3e3;
+	color: dimgrey;
+	border-radius: 20px;
+	padding: 10px 15px;
+	cursor: pointer;
+}
+
+.typeList li:hover {
+	background-color: #d6d6d6;
+}
+
+.typeList li.selected {
+	color: #fff;
+}
+
+.typeList li.any {
+	background-color: #b9b6d1;
+}
+
+.typeList li.normal {
+	background-color: #a6ab76;
+}
+
+.typeList li.electric {
+	background-color: #e3c260;
+}
+
+.typeList li.fire {
+	background-color: #fe7500;
+}
+
+.typeList li.water {
+	background-color: #6a87f3;
+}
+
+.typeList li.grass {
+	background-color: #53d34e;
+}
+
+.typeList li.bug {
+	background-color: #a0bf04;
+}
+
+.typeList li.fight {
+	background-color: #cf000b;
+}
+
+.typeList li.psychic {
+	background-color: #ff2482;
+}
+
+.typeList li.flying {
+	background-color: #b282f2;
+}
+
+.typeList li.fairy {
+	background-color: #e999de
+}
